@@ -179,27 +179,49 @@
         <div class="projWrap">
             <div class="proj">
                 <div class="projInner">
-                    <div class="projcont" id="disco"></div>
+                    <div class="projcont" id="disco">
+                        <div class="construction">
+                        <div class="constext">
+                            Under Construction
+                        </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="proj">
                 <div class="projInner">
                     <a href="https://play.google.com/store/apps/details?id=com.danielwilsondesign.touchgame">
-                        <div class="projcont" id="blitz"></div>
+                        <div class="projcont" id="blitz">
+                            <div class="construction">
+                                <div class="constext">
+                                    Android
+                                </div>
+                            </div>
+                        </div>
                     </a>
                 </div>
             </div>
             <div class="proj">
                 
                     <div class="projInner"><a href="https://play.google.com/store/apps/details?id=com.danielwilsondesign.weebly.universityweather">
-    <div class="projcont" id="umichtoday"></div>
+    <div class="projcont" id="umichtoday">
+        <div class="construction">
+            <div class="constext">
+                Android
+            </div>
+        </div>
+    </div>
 </a>
 </div>
                
             </div>
         </div>
     </div>
-
+    <script>
+        $('.constext').hover(function () {
+            $(this).animate({ background: 'yellow' }, 300);
+        });
+    </script>
     <div style="height:auto;" id="skills">
         <div class="container">
            <div class="skillsection" id="frontend">
