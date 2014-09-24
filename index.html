@@ -52,7 +52,7 @@
                     About
                 </div>
             </div>
-            
+
             <div id="skill" class="navbutton">
                 <div class="inner">
                     Skills
@@ -65,7 +65,7 @@
             </div>
             <div id="social" class="navbutton">
                 <div class="inner">
-                     Contact
+                    Contact
                 </div>
             </div>
         </div>
@@ -93,20 +93,31 @@
                         <div class="outer">
                             <div class="inner">
                                 <div id="textBacker">
-                                   I design and develop unique experiences, interfaces, and content systems
-                                for android and web applications.
+                                    I design and develop unique experiences, interfaces, and content systems
+                                    for android and web applications.
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="resumeButton" style="display:table;">
-                        
-                            <div onclick="location.href='res/resume.pdf'" class="inner" style="text-align:center;">
 
-                                Download Resume
-                            </div>
-                        
+                        <div onclick="location.href='res/resume.pdf'" class="inner" style="text-align:center;">
+
+                            Download Resume
+                        </div>
+
                     </div>
+                    <script>
+                        $('.resumeButton').mousedown(function () {
+                            $(this).css({ "margin-top": '28px', 'borderWidth': '0px' });
+                        });
+                        $('.resumeButton').mouseup(function () {
+                            $(this).css({ "margin-top": '24px', 'borderWidth': '4px' });
+                        });
+                        $('.resumeButton').mouseleave(function () {
+                            $(this).css({ "margin-top": '24px', 'borderWidth': '4px' });
+                        });
+                    </script>
                 </div>
 
 
@@ -135,11 +146,11 @@
                         and MongoDB<div class="inpic" id="MongoDB"></div> <br />
                         Realtime interaction using Socket.io<br />
                         RESTful APIs using ExpressJs<div class="inpic" id="express"></div><br />
-                                                
+
                     </div>
                 </div>
             </div>
-            
+
         </div>
     </div>
 
@@ -152,8 +163,8 @@
                     </div>
                 </div>
             </div>
-             <div class="expsinglet" style="float:right;">
-                <div class="inner" >
+            <div class="expsinglet" style="float:right;">
+                <div class="inner">
                     <div class="exptitle">
                         Android Development
                     </div>
@@ -166,10 +177,10 @@
                     </div>
                 </div>
             </div>
-            
+
         </div>
     </div>
-   
+
     <div class="portWrap">
         <div class="headerText" id="skillsHeader">
             <div class="textDescription">
@@ -181,9 +192,9 @@
                 <div class="projInner">
                     <div class="projcont" id="disco">
                         <div class="construction">
-                        <div class="constext">
-                            Under Construction
-                        </div>
+                            <div class="constext">
+                                Under Construction
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -202,18 +213,19 @@
                 </div>
             </div>
             <div class="proj">
-                
-                    <div class="projInner"><a href="https://play.google.com/store/apps/details?id=com.danielwilsondesign.weebly.universityweather">
-    <div class="projcont" id="umichtoday">
-        <div class="construction">
-            <div class="constext">
-                Android
-            </div>
-        </div>
-    </div>
-</a>
-</div>
-               
+
+                <div class="projInner">
+                    <a href="https://play.google.com/store/apps/details?id=com.danielwilsondesign.weebly.universityweather">
+                        <div class="projcont" id="umichtoday">
+                            <div class="construction">
+                                <div class="constext">
+                                    Android
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
             </div>
         </div>
     </div>
@@ -224,66 +236,66 @@
     </script>
     <div style="height:auto;" id="skills">
         <div class="container">
-           <div class="skillsection" id="frontend">
-               <div class="skilltitle">
-                  Experienced with the <span style="font-weight:700; border-bottom: 4px solid black;">MEAN</span>  stack
-               </div>
-               <div class="skilltext">
-                   <div class="skillsTab">
-                       <div class="tabInner">
-                           <div class="tabContent" style="border-color: #a06327">
-                               
-                                       <div id="MongoDB">
+            <div class="skillsection" id="frontend">
+                <div class="skilltitle">
+                    Experienced with the <span style="font-weight:700; border-bottom: 4px solid black;">MEAN</span>  stack
+                </div>
+                <div class="skilltext">
+                    <div class="skillsTab">
+                        <div class="tabInner">
+                            <div class="tabContent" style="border-color: #a06327">
 
-                                       </div>
-                                   
-                           </div>
-                       </div>
-                   </div>
-                   <div class="skillsTab">
-                       <div class="tabInner">
-                           <div class="tabContent" style="border-color: #a06327">
-                               
-                                   <div id="express"></div>
-                           </div>
-                       </div>
-                       
-                   </div>
-                   <div class="skillsTab">
-                       <div class="tabInner">
-                           <div class="tabContent" style="border-color: #c0c0c0">
-                               
-                                      <div id="angular">
+                                <div id="MongoDB">
 
-                                       </div>
-                                  
-                           </div>
-                       </div>
-                   </div>
-                   <div class="skillsTab">
-                       <div class="tabInner">
-                           <div class="tabContent">
-                              
-                                       <div id="node"></div>
-                                       
-                           </div>
-                       </div>
-                   </div>
-               </div>
-           </div>
-           <div class="skillsection" id="backend">
-               <div class="skilltitle" id="quick">
-                   and always learning
-                   <span style="font-weight:500;">new technologies</span style="font-weight:500;">
-               </div>
-              
+                                </div>
 
-              
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skillsTab">
+                        <div class="tabInner">
+                            <div class="tabContent" style="border-color: #a06327">
+
+                                <div id="express"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="skillsTab">
+                        <div class="tabInner">
+                            <div class="tabContent" style="border-color: #c0c0c0">
+
+                                <div id="angular">
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skillsTab">
+                        <div class="tabInner">
+                            <div class="tabContent">
+
+                                <div id="node"></div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="skillsection" id="backend">
+                <div class="skilltitle" id="quick">
+                    and always learning
+                    <span style="font-weight:500;">new technologies</span>
+                </div>
+
+
+
+            </div>
         </div>
     </div>
-        </div>
 
-     <div class="full" id="three" style="background:#fff;">
+    <div class="full" id="three" style="background:#fff;">
         <div class="container">
             <div class="headerText" id="skillsHeader">
                 <div id="skillsTitle">
@@ -472,8 +484,20 @@
                                 </div>
 
                             </div>
+                            <script>
+                                $('#sendButton').mousedown(function () {
+                                    $(this).css({ "margin-top": '4px', 'borderWidth': '0px' ,height:'51px'});
+                                });
+                                $('#sendButton').mouseup(function () {
+                                    $(this).css({ "margin-top": '0px', 'borderWidth': '4px', height: '54px' });
+                                });
+                                $('#sendButton').mouseleave(function () {
+                                    $(this).css({ "margin-top": '0px', 'borderWidth': '4px', height: '54px' });
+                                });
+                            </script>
+
                         </form>
-                        
+
                     </div>
                 </div>
             </div>
@@ -481,18 +505,18 @@
     </div>
     <div class="footer" id="fiveFooter">
         <div class="inner">Daniel Wilson 2014 - wilsoda@umich.edu</div>
-        
+
     </div>
 
     <script>
         $("#about").click(function () {
             $('html, body').animate({
-                scrollTop: $("#two").offset().top +2
+                scrollTop: $("#two").offset().top + 2
             }, 700);
         });
         $("#proj").click(function () {
             $('html, body').animate({
-                scrollTop: $(".portWrap").offset().top +2
+                scrollTop: $(".portWrap").offset().top + 2
             }, 700);
         });
         $("#skill").click(function () {
