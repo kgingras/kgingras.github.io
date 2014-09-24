@@ -873,6 +873,10 @@ a {
         width: 900px;
     }
 
+    .expouter {
+        width:1000px;
+    }
+
     .intro:before {
         right: 60%;
     }
