@@ -136,6 +136,7 @@
             </div>
             <div class="expsinglet">
                 <div class="inner">
+                    <div class="expholder">
                     <div class="exptitle">
                         Web Development
                     </div>
@@ -146,15 +147,15 @@
                         and MongoDB<div class="inpic" id="MongoDB"></div> <br />
                         Realtime interaction using Socket.io<br />
                         RESTful APIs using ExpressJs<div class="inpic" id="express"></div><br />
-
                     </div>
+                </div>
                 </div>
             </div>
 
         </div>
     </div>
 
-    <div class="expfull" style="background:white;">
+    <div class="expfull"  id="androiddev">
         <div class="expouter">
             <div class="expsinglep">
                 <div class="inner">
@@ -165,15 +166,18 @@
             </div>
             <div class="expsinglet" style="float:right;">
                 <div class="inner">
-                    <div class="exptitle">
-                        Android Development
-                    </div>
-                    <div class="exptext">
+                    <div class="expholder">
+                        <div class="exptitle">
+                            Android Development
+
+                        </div>
+                        <div class="exptext">
                         Clean snappy native android applications<br />
                         Colorful UI/UX with smooth animation<br />
                         SQLite database setup<br />
                         NoSQL provider functionality<br />
 
+                        </div>
                     </div>
                 </div>
             </div>
@@ -191,11 +195,7 @@
             <div class="proj">
                 <div class="projInner">
                     <div class="projcont" id="disco">
-                        <div class="construction">
-                            <div class="constext">
-                                Under Construction
-                            </div>
-                        </div>
+
                     </div>
                 </div>
             </div>
@@ -203,11 +203,7 @@
                 <div class="projInner">
                     <a href="https://play.google.com/store/apps/details?id=com.danielwilsondesign.touchgame">
                         <div class="projcont" id="blitz">
-                            <div class="construction">
-                                <div class="constext">
-                                    Android
-                                </div>
-                            </div>
+
                         </div>
                     </a>
                 </div>
@@ -217,11 +213,7 @@
                 <div class="projInner">
                     <a href="https://play.google.com/store/apps/details?id=com.danielwilsondesign.weebly.universityweather">
                         <div class="projcont" id="umichtoday">
-                            <div class="construction">
-                                <div class="constext">
-                                    Android
-                                </div>
-                            </div>
+
                         </div>
                     </a>
                 </div>
@@ -230,9 +222,7 @@
         </div>
     </div>
     <script>
-        $('.constext').hover(function () {
-            $(this).animate({ background: 'yellow' }, 300);
-        });
+
     </script>
     <div style="height:auto;" id="skills">
         <div class="container">
@@ -511,22 +501,22 @@
     <script>
         $("#about").click(function () {
             $('html, body').animate({
-                scrollTop: $("#two").offset().top + 2
+                scrollTop: $("#two").offset().top
             }, 700);
         });
         $("#proj").click(function () {
             $('html, body').animate({
-                scrollTop: $(".portWrap").offset().top + 2
+                scrollTop: $(".portWrap").offset().top
             }, 700);
         });
         $("#skill").click(function () {
             $('html, body').animate({
-                scrollTop: $("#webdev").offset().top + 2
+                scrollTop: $("#webdev").offset().top
             }, 700);
         });
         $("#social").click(function () {
             $('html, body').animate({
-                scrollTop: $("#four").offset().top + 2
+                scrollTop: $("#four").offset().top
             }, 700);
         });
     </script>
