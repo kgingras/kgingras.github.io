@@ -122,6 +122,14 @@ input[type=submit] {
     z-index: 1000000;
     color: white;
     background: rgba(255, 255, 255, 0.17);
+    transition: all .5s ease;
+}
+
+.barDown {
+    position: fixed;
+    height:60px;
+    background: #DD4444;
+    color:white;
 }
 
 .center {
@@ -173,7 +181,7 @@ input[type=submit] {
     }
 
     #phone {
-        background:url(../Images/blitzblockDevice.png) center no-repeat;
+        background:url("https://m1.behance.net/rendition/modules/141660753/disp/fd2188f96fdc104a5f0892537765766e.png") center no-repeat;
         background-size:contain;
     }
 
@@ -242,7 +250,7 @@ height:600px;
 }
 
 #browser {
-    background:url(../Images/Icons/MacBook-Pro-mockup.png) center no-repeat;
+    background:url("https://m1.behance.net/rendition/modules/141660749/disp/baf2ed313f2e2584674a4c5ba8457c80.png") center no-repeat;
     background-size:contain;
 }
 
