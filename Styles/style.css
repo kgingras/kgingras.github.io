@@ -21,6 +21,7 @@ a {
 	font-family: "Pacifico";
 	font-size: 90px;
 	text-align: center;
+	color:#383838
 }
 
 #subtitle {
@@ -31,7 +32,9 @@ a {
 }
 
 #laptop {
-	width: 850px;
+	max-width: 850px;
+	width:90%;
+	max-height: 500px;
 	height: 500px;
 	margin: 0px auto 50px auto;
 	background: url("../Images/Lap.png") center no-repeat;
@@ -55,4 +58,16 @@ a {
 
 .link:hover {
 	color:#777;
+}
+
+@media only screen (max-width: 321px) {
+	#title {
+		font-size: 18px;
+	}
+}
+
+@media only screen (max-width: 500px) {
+	#title {
+		font-size: 25px;
+	}
 }
