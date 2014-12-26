@@ -50,12 +50,13 @@ jQuery(function($, undefined) {
                 }
             } catch(e) {
                 term.error(new String(e));
+                term.error("Try help");
             }
         } else {
            term.echo('');
         }
     }, {
-        greetings: 'Welcome',
+        greetings: '',
         name: 'js_demo',
         prompt: '> '});
 });
