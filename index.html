@@ -36,7 +36,7 @@
     </div>
     <div id="lapUnder">
     </div>
-<form method="POST" action="http://formspree.io/wilsoda@umich.edu" id="f">
+<form method="POST" action="http://formspree.io/wilsoda@umich.edu" name="f">
   <input type="email" name="_replyto"></input>
   <textarea name="body"></textarea>
   <input type="submit" value="Send"></input>
@@ -78,10 +78,6 @@ $(function() {
 jQuery(function($, undefined) {
     $('#lapScreen').terminal(function(command, term) {
 
-        var form = $('#f');
-        form.method = "POST";
-        form.action = "http://formspree.io/wilsoda@umich.edu";
-
         if (command !== '') {
             if(command == 'help') {
                 term.echo("available commands are:\nprojects resume contact");
@@ -94,18 +90,18 @@ jQuery(function($, undefined) {
             } //good email 
             else {
                 term.pop();
-                form._replyto = command;
+                document.f._replyto = command;
                 term.push(function(name) {
                     term.pop();
-                    form.name = name;
+                    document.f.name = name;
                     term.push(function(msg) {
                         term.pop();
-                        form.body = msg;
+                        document.f.body = msg;
                         console.log(form.body);
                         console.log(form.name);
                         console.log(form._replyto);
                         //Send the Email
-                        form.submit();
+                        document.f.submit();
 
                     }, {prompt:'Message: '});
                 },{prompt:'Name: '});
