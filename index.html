@@ -68,8 +68,8 @@ $(function() {
                         success: function(data) {
                             alert('sent');
                         },
-                        error: function() {
-                            alert('err');
+                        error: function(err) {
+                            alert(err);
                         }
                     });
                 });
