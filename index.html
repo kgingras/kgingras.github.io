@@ -69,7 +69,7 @@ jQuery(function($, undefined) {
             else if( command == 'contact' ) {
                 term.push(function(command) {
             if (!validateEmail(command)) {
-                term.echo('bad email');
+                term.echo('invalid email');
                 term.pop();
             } //good email 
             else {
