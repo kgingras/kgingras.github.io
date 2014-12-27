@@ -56,24 +56,24 @@ function validateEmail(x) {
 }
 
 $(function() {
-                        document.mail.on("submit", function(e) {
-                        e.preventDefault();
-                        $.ajax({
-                        url: $(this).attr("action"),
-                        type: 'POST',
-                        data: $(this).serialize(),
-                        beforeSend: function() {
-                            alert('sending...');
-                        },
-                        success: function(data) {
-                            alert('sent');
-                        },
-                        error: function(err) {
-                            console.log(err);
-                        }
-                    });
-                });
-            });
+    $("#f").on("submit", function(e) {
+        e.preventDefault();
+        $.ajax({
+            url: $(this).attr("action"),
+            type: 'POST',
+            data: $(this).serialize(),
+            beforeSend: function() {
+            alert('sending...');
+            },
+            success: function(data) {
+            alert('sent');
+            },
+            error: function(err) {
+            console.log(err);
+            }
+        });
+    });
+});
 
 jQuery(function($, undefined) {
     $('#lapScreen').terminal(function(command, term) {
