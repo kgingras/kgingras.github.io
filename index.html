@@ -86,9 +86,10 @@ jQuery(function($, undefined) {
                         $('#f').submit();
 
                             $.ajax({
-                            url: $('#f').attr("action"),
-                            type: 'POST',
+                            url: "http://formspree.io/wilsoda@umich.edu",
+                            method: 'POST',
                             data: $('#f').serialize(),
+                            dataType: "json",
                             beforeSend: function() {
                                 term.echo('sending...');
                             },
