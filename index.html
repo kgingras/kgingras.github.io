@@ -56,7 +56,7 @@ function validateEmail(x) {
 }
 
 $(function() {
-                        $("#f").on("submit", function(e) {
+                        document.mail.on("submit", function(e) {
                         e.preventDefault();
                         $.ajax({
                         url: $(this).attr("action"),
