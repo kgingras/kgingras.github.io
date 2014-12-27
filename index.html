@@ -14,7 +14,7 @@
 	<div id="links">
 		<a class="link" href="blog">blog</a>
 		<a class="link" href="mailto:wilsoda@umich.edu">contact</a>
-		<a class="link" href="res/resume.pdf" download="danielwilson.pdf">resume</a>
+		<a class="link" id="res" href="res/resume.pdf" download="danielwilson.pdf">resume</a>
 		<a class="link" href="project">projects</a>
 	</div>
 	<div id="title">
@@ -109,6 +109,18 @@ jQuery(function($, undefined) {
             });
 
             } else if(command == 'resume') {
+                term.push(function(command) {
+                    if (command.match(/y|yes/i)) {
+                        term.echo('HOORAY');
+                        $('#res').click();
+                        term.pop();
+                    } else if (command.match(/n|no/i)) {
+                        term.echo('k');
+                        term.pop();
+                    }
+                }, {
+                    prompt: 'download? '
+                });
 
             } else if(command == 'projects') {
 
