@@ -55,24 +55,8 @@ function validateEmail(x) {
     return true;
 }
 
-$(function() {
-    $("#f").on("submit", function(e) {
-        e.preventDefault();
-        $.ajax({
-            url: $(this).attr("action"),
-            type: 'POST',
-            data: $(this).serialize(),
-            beforeSend: function() {
-            alert('sending...');
-            },
-            success: function(data) {
-            alert('sent');
-            },
-            error: function(err) {
-            console.log(err);
-            }
-        });
-    });
+$("#f").on("submit", function(e) {
+    e.preventDefault();
 });
 
 jQuery(function($, undefined) {
@@ -101,12 +85,28 @@ jQuery(function($, undefined) {
                         console.log(document.f);
                         $('#f').submit();
 
+                            $.ajax({
+                            url: $('#f').attr("action"),
+                            type: 'POST',
+                            data: $('#f').serialize(),
+                            beforeSend: function() {
+                                term.echo('sending...');
+                            },
+                            success: function(data) {
+                                term.echo('success! thank you.');
+                            },
+                            error: function(err) {
+                                term.echo('there was an error.');
+                            }
+                        });
+
                     }, {prompt:'Message: '});
                 },{prompt:'Name: '});
             }
             }, {
                 prompt: 'Email: '
             });
+
             } else if(command == 'resume') {
 
             } else if(command == 'projects') {
