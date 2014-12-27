@@ -55,6 +55,26 @@ function validateEmail(x) {
     return true;
 }
 
+$(function() {
+                        $("#f").on("submit", function(e) {
+                        e.preventDefault();
+                        $.ajax({
+                        url: $(this).attr("action"),
+                        type: 'POST',
+                        data: $(this).serialize(),
+                        beforeSend: function() {
+                            alert('sending...');
+                        },
+                        success: function(data) {
+                            alert('sent');
+                        },
+                        error: function() {
+                            alert('err');
+                        }
+                    });
+                });
+            });
+
 jQuery(function($, undefined) {
     $('#lapScreen').terminal(function(command, term) {
 
@@ -84,7 +104,9 @@ jQuery(function($, undefined) {
                         console.log(form.body);
                         console.log(form.name);
                         console.log(form._replyto);
+                        //Send the Email
                         form.submit();
+
                     }, {prompt:'Message: '});
                 },{prompt:'Name: '});
             }
