@@ -59,12 +59,53 @@ $("#f").on("submit", function(e) {
     e.preventDefault();
 });
 
+var about = {
+    me: {
+        name:"Daniel Wilson",
+        from:"Traverse City, MI",
+        loves: [
+        "Development",
+        "Design",
+        "Music"
+        ]
+    }
+};
+
+var projects = {
+    DiscoCloud: {
+            name:'DiscoCloud',
+            link:'http://discocloud.herokuapp.com',
+            desc:'sycnronous group dj app',
+            tech:'Node.js, ExpressJS, Socket.io',
+            status:'under construction'
+        },
+    BlitzBlock:{
+            name:'BlitzBlock',
+            link:'http://goo.gl/zqblW9',
+            desc:'fast paced tapping game',
+            tech:'android',
+            status:'complete'
+    },
+    Delivice: {
+            name:'Delivice',
+            link:'http://delivice.github.io',
+            desc:'front page for local startup',
+            tech:'HTML5, CSS3, Js, Github Pages',
+            status:'under construction'
+    },
+}
+
 jQuery(function($, undefined) {
     $('#lapScreen').terminal(function(command, term) {
 
         if (command !== '') {
             if(command == 'help') {
-                term.echo("available commands are:\nprojects resume contact");
+                term.echo(
+                    "   about          --about me\n" +
+                    "   resume         --my experience\n" +
+                    "   contact        --send me an email\n" +
+                    "   projects       --projects I've worked on\n" +
+                    "   <js>           --this is a js console");
             } 
             else if( command == 'contact' ) {
                 term.push(function(command) {
@@ -112,10 +153,7 @@ jQuery(function($, undefined) {
                 term.push(function(command) {
                     if (command.match(/y|yes/i)) {
                         term.echo('HOORAY');
-                        $('#res').click(function(e) {
-                            e.preventDefault();  
-                            window.location.href = 'res/resume.pdf';
-                        });
+                        $('#res').click();
                         term.pop();
                     } else if (command.match(/n|no/i)) {
                         term.echo('k');
@@ -126,7 +164,9 @@ jQuery(function($, undefined) {
                 });
 
             } else if(command == 'projects') {
-
+                term.echo(JSON.stringify(projects, null, "\t"));
+            } else if(command == 'about') {
+                term.echo(JSON.stringify(about, null, "\t"));
             } else {
                 try {
                     var result = window.eval(command);

@@ -88,7 +88,7 @@
 }
 .terminal, .cmd {
     font-family: FreeMono, monospace;
-    color: #fff;
+    color: #37FF40;
     background-color: #383838;
     font-size: 12px;
     line-height: 14px;
@@ -136,7 +136,7 @@
     clear: both;
 }
 .terminal a {
-    color: #fff;
+    color: #A4FFA8;
     text-decoration: none;
 }
 .terminal a:hover {
