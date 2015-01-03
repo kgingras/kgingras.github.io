@@ -114,6 +114,7 @@ jQuery(function($, undefined) {
                     "   resume         --my experience\n" +
                     "   contact        --send me an email\n" +
                     "   projects       --projects I've worked on\n" +
+                    "   blog           --check out my blog\n" +
                     "   <js>           --this is a js console");
             } 
             else if( command == 'contact' ) {
@@ -176,7 +177,9 @@ jQuery(function($, undefined) {
                 term.echo(JSON.stringify(projects, null, "\t"));
             } else if(command == 'about') {
                 term.echo(JSON.stringify(about, null, "\t"));
-            } else {
+            } else if(command == 'blog') {
+                window.location.href = "blog";
+            }else {
                 try {
                     var result = window.eval(command);
                     if (result !== undefined) {
