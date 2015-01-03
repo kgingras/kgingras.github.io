@@ -23,7 +23,7 @@ a {
 	font-size: 90px;
 	text-align: center;
 	color:#383838;
-	height:25%;
+	height:28%;
 	position: relative;
 }
 
@@ -134,13 +134,13 @@ border-radius: 0 0 5px 5px;
 
 #desk {
 margin: 0 auto;
-background: rgb(253, 217, 111);
-height: 24%;
+/*background: rgb(253, 217, 111);*/
+height: 21%;
 }
 
 #desktop {
 	height:2.5%;
-	background:rgb(255, 233, 168);
+	/*background:rgb(96, 169, 120);*/
 }
 
 #f {
