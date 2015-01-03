@@ -14,11 +14,13 @@
 	<div id="links">
 		<a class="link" href="blog">blog</a>
 		<a class="link" href="mailto:wilsoda@umich.edu">contact</a>
-		<a class="link" id="res" href="res/resume.pdf" download="danielwilson.pdf">resume</a>
+		<a class="link" id="res" href="res/resume.pdf" download>resume</a>
 		<a class="link" href="blog/project">projects</a>
 	</div>
 	<div id="title">
-		Daniel Wilson
+		<div id="low">
+            Daniel Wilson
+        </div>
 	</div>
 <!-- 	<div id="subtitle">
 		MAKE A DIFFERENCE
@@ -35,7 +37,16 @@
         </div>
     </div>
     <div id="lapUnder">
+        <div class="book">
+        </div>
+        <div class="book">
+        </div>
     </div>
+    <div id="desktop">
+    </div>
+    <div id="desk">
+    </div>
+
 <form method="POST" action="http://formspree.io/wilsoda@umich.edu" name="mail" id="f">
   <input type="email" name="_replyto"></input>
   <textarea name="body"></textarea>
@@ -151,7 +162,7 @@ jQuery(function($, undefined) {
                 term.push(function(command) {
                     if (command.match(/y|yes/i)) {
                         term.echo('HOORAY');
-                        $('#res').click();
+                        window.location.href = "res/resume.pdf";
                         term.pop();
                     } else if (command.match(/n|no/i)) {
                         term.echo('k');
