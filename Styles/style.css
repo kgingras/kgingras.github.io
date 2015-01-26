@@ -4,11 +4,20 @@ body {
 	font-family:"Open Sans";
 	background:rgb(254, 198, 98);
 	color:rgb(86, 86, 86);
+	display: table;
+	height:100vh;
+	width:100%;
 }
 
 a {
 	text-decoration: none;
 	color:black;
+}
+
+#center {
+	display: table-cell;
+	vertical-align: middle;
+	margin: 0 auto;
 }
 
 #face {
@@ -24,9 +33,6 @@ a {
 	font-size: 90px;
 	text-align: center;
 	color:#383838;
-	height:28%;
-	position: relative;
-
 }
 
 #low {
@@ -157,13 +163,14 @@ height: 19.5%;
 	#title {
 		height:auto;
 		width:100%;
-	}
-
-	#low {
 		position: relative;
 		font-size:38px;
 		border-bottom: 4px solid #383838;
 		background:white;
+	}
+
+	#center {
+		display: block;
 	}
 
 	.link {
