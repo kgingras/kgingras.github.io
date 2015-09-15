@@ -1,10 +1,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>Daniel Wilson</title>
+    <title>Keith Gingras</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" 
       type="image/png" 
-      href="Images/Logo.ico">
+      href="Images/kg.png">
     <link href="Styles/style.css" rel="stylesheet" />
     <link href="Styles/terminal.css" rel="stylesheet" />
     <link href='http://fonts.googleapis.com/css?family=Pacifico|Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
@@ -13,7 +13,7 @@
 <body>
     <div id="center">
     	<div id="title">
-            Keith Gingras
+            <img src = "Images/frontpagelogo.png">
     	</div>
         <div id="lapOut">
             <div id="lapIn">
@@ -21,23 +21,14 @@
                 </div>
             </div>
         </div>
-        <div id="lapBottom">
-            <div id="thing">
-            </div>
-        </div>
-        <div id="lapUnder">
-            <div class="book">
-            </div>
-            <div class="book">
-            </div>
-        </div>
+        
         <div id="linkHold">
             <a href="http://kgingras.github.io/blog/about">
             <div class="link">
                 ABOUT
             </div>
             </a>
-            <a href="http://kgingras.github.io/blog/projects">
+            <a href="http://kgingras.github.io/blog/project">
             <div class="link">
                 PROJECTS
             </div>
@@ -95,22 +86,23 @@ var about = {
 };
 
 var projects = {
-    DiscoCloud: {
-            desc:'sycnronous group dj app',
-            link:'http://discocloud.herokuapp.com',
-            tech:'Node.js, ExpressJS, Socket.io',
+    CellPM: {
+            desc:'Tool for predicting cell penetrating molecules',
+            link:'http://cellpm.org',
+            tech:'HTML, CSS',
         },
-    BlitzBlock:{
-            desc:'fast paced tapping game',
-            link:'http://goo.gl/zqblW9',
-            tech:'android',
+     'Membranome analysis':{
+            desc:'Analysis of >6000 proteins',
+            cont:'and compare results to other prediction tools',
+            tech:'C++',
     },
-    Delivice: {
-            desc:'front page for local startup',
-            link:'http://delivice.github.io',
-            tech:'HTML5, CSS3, Js, Github Pages',
+    'Game project':{
+        desc: 'The game is yet to be determined.',
+        tech: 'Unity 3d, C#',
     },
 }
+
+ 
 
 jQuery(function($, undefined) {
     $('#lapScreen').terminal(function(command, term) {
