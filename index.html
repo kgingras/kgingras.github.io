@@ -33,11 +33,6 @@
                 PROJECTS
             </div>
             </a>
-            <a href="mailto:kgingras@umich.edu">
-            <div class="link">
-                    CONTACT
-            </div>
-            </a>
             <a href="http://kgingras.github.io/blog">
             <div class="link">
                 BLOG
@@ -85,6 +80,15 @@ var about = {
     }
 };
 
+var contact = {
+    Email: 'kgingras@umich.edu',
+    Phone: '231-590-4408'
+};
+
+var hello = {
+    hi: 'Welcome to my Website'
+};
+
 var projects = {
     CellPM: {
             desc:'Tool for predicting cell penetrating molecules',
@@ -118,47 +122,7 @@ jQuery(function($, undefined) {
                     "   <js>           --this is a js console");
             } 
             else if( command == 'contact' ) {
-                term.push(function(command) {
-            if (!validateEmail(command)) {
-                term.echo('invalid email');
-                term.pop();
-            } //good email 
-            else {
-                term.pop();
-                document.mail._replyto.value = command;
-                term.push(function(name) {
-                    term.pop();
-                    document.mail.name.value = name;
-                    term.push(function(msg) {
-                        term.pop();
-                        document.mail.body.value = msg;
-                        //Send the Email
-                        console.log(document.f);
-                        $('#f').submit();
-
-                            $.ajax({
-                            url: "http://formspree.io/wilsoda@umich.edu",
-                            method: 'POST',
-                            data: $('#f').serialize(),
-                            dataType: "json",
-                            beforeSend: function() {
-                                term.echo('sending...');
-                            },
-                            success: function(data) {
-                                term.echo('success! thank you.');
-                            },
-                            error: function(err) {
-                                term.echo('there was an error.');
-                            }
-                        });
-
-                    }, {prompt:'Message: '});
-                },{prompt:'Name: '});
-            }
-            }, {
-                prompt: 'Email: '
-            });
-
+                term.echo(JSON.stringify(contact, null, "\t"));
             } else if(command == 'resume') {
                 term.push(function(command) {
                     if (command.match(/y|yes/i)) {
@@ -179,7 +143,10 @@ jQuery(function($, undefined) {
                 term.echo(JSON.stringify(about, null, "\t"));
             } else if(command == 'blog') {
                 window.location.href = "blog";
-            }else {
+            }else if(command == 'hello') {
+                term.echo(JSON.stringify(hello, null, "\t"));
+            }
+            else {
                 try {
                     var result = window.eval(command);
                     if (result !== undefined) {
