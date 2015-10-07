@@ -106,6 +106,14 @@ var projects = {
     },
 }
 
+var pokemon = {
+    Pokemon: {
+            desc:'Pokemon Red remake with updated images',
+            reqs:'Requires Unity plugin and open in Firefox',
+            link:'http://kgingras.github.io/Pokemon/PokemonFinalWebBuild/PokemonFinal',
+            tech:'Unity 3d, C#',
+        },
+}
  
 
 jQuery(function($, undefined) {
@@ -119,6 +127,7 @@ jQuery(function($, undefined) {
                     "   contact        --send me an email\n" +
                     "   projects       --projects I've worked on\n" +
                     "   blog           --check out my blog\n" +
+                    "   Pokemon        --my pokemon game\n" +
                     "   <js>           --this is a js console");
             } 
             else if( command == 'contact' ) {
@@ -145,6 +154,8 @@ jQuery(function($, undefined) {
                 window.location.href = "blog";
             }else if(command == 'hello') {
                 term.echo(JSON.stringify(hello, null, "\t"));
+            }else if(command == 'Pokemon') {
+                term.echo(JSON.stringify(pokemon, null, "\t"));
             }
             else {
                 try {
