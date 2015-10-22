@@ -100,8 +100,8 @@ var projects = {
             cont:'and compare results to other prediction tools',
             tech:'C++',
     },
-    'Game project':{
-        desc: 'The game is yet to be determined.',
+    'Pixel Prototype':{
+        desc: 'Destroy blocks and consume pixels to survive',
         tech: 'Unity 3d, C#',
     },
 }
@@ -114,7 +114,15 @@ var pokemon = {
             tech:'Unity 3d, C#',
         },
 }
- 
+
+var pixel = {
+    PixelSurvivor: {
+            desc:'Survival game where destruction is key',
+            reqs:'Requires Unity plugin, Firefox, and a controller',
+            link:'http://kgingras.github.io/PixelSurvivor/PixelSurvivor',
+            tech:'Unity 3d, C#',
+        },
+}
 
 jQuery(function($, undefined) {
     $('#lapScreen').terminal(function(command, term) {
@@ -128,6 +136,7 @@ jQuery(function($, undefined) {
                     "   projects       --projects I've worked on\n" +
                     "   blog           --check out my blog\n" +
                     "   Pokemon        --my pokemon game\n" +
+                    "   Pixel          --Survival Prototype\n" +
                     "   <js>           --this is a js console");
             } 
             else if( command == 'contact' ) {
@@ -152,10 +161,12 @@ jQuery(function($, undefined) {
                 term.echo(JSON.stringify(about, null, "\t"));
             } else if(command == 'blog') {
                 window.location.href = "blog";
-            }else if(command == 'hello') {
+            }else if(command == 'hello' || command == 'hi') {
                 term.echo(JSON.stringify(hello, null, "\t"));
-            }else if(command == 'Pokemon') {
+            }else if(command == 'Pokemon' || command == 'pokemon') {
                 term.echo(JSON.stringify(pokemon, null, "\t"));
+            }else if(command == 'Pixel' || command == 'pixel') {
+                term.echo(JSON.stringify(pixel, null, "\t"));
             }
             else {
                 try {
